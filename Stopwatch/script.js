@@ -27,24 +27,25 @@ function formatTime(elapsedTime) {
         (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" +
         (min ? (min > 9 ? min : "0" + min) : "00") + ":" +
         (sec ? (sec > 9 ? sec : "0" + sec) : "00") + ":" +
-        (milliSec> 9? milliSec: "0" +  milliSec)
+        (milliSec > 9 ? milliSec : "0" + milliSec)
     )
 }
 
 function stopTimer() {
-      clearInterval(timerInterval)
-      startBtn.disabled = false;
-      stopBtn.disabled = true;
+    clearInterval(timerInterval)
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
 }
 
 function resetTimer() {
-   clearInterval(timerInterval)
-   elapsedTime = 0;
-   timer.textContent = "00:00:00";
-   startBtn.disabled = false;
-   stopBtn.disabled = true;
+    clearInterval(timerInterval)
+    elapsedTime = 0;
+    timer.textContent = "00:00:00";
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
 }
 
 startBtn.addEventListener("click", startTimer)
 stopBtn.addEventListener("click", stopTimer)
 resetBtn.addEventListener("click", resetTimer)
+
