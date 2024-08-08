@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-card {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+.video-card img {
+  width: 100%;
+  border-radius: 20px;
+}
+.video-card h1 {
+  padding: 0px 10px;
+}
+.video-card p {
+  padding: 10px;
+  font-weight: 300;
+  font-size: 13px;
+}
+.video-card #watch {
+  width: 50%;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+}
+.video-card #watch:hover {
+  background-color: blue;
+  border-radius: 20px;
+  transition: 0.5s;
+  color: white;
+}
+
+.video-container{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+
+ opacity: 1;
+ transition: opactiy 0.5s;
+  z-index: 1;
+}
+.video-container.active{
+  display: flex;
+  /* opacity: 0; */
+}
+.video {
+  width: 60%;
+
+  position: relative;
+}
+.exit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  top: 10%;
+  right: 10%;
+  font-size: 20px;
+  color: white;
+  background: none;
+  border: 3px solid rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  font-weight: 300;
+  /* color: white; */
+}
+.exit:hover{
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+  border: none;
+}

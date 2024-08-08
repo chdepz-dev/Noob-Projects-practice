@@ -8,7 +8,7 @@ counters.forEach((counter) => {
     function updateCounter(){
         let current = parseInt(counter.textContent);
         if(current < target){
-            counter.textContent = Math.ceil(current + increment);
+            counter.textContent = Math.ceil(current + increment)
             setTimeout(updateCounter, 20); //adujst for the speed
         }else{
             counter.textContent = `${target}+`;
@@ -19,3 +19,4 @@ counters.forEach((counter) => {
 
 
 
+// console.log(Math.ceil(5.51984))
