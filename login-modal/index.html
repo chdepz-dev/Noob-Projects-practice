@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-btns">
+      <h2>modal form</h2>
+      <button id="login">Login</button>
+      <button id="signup">sign up</button>
+    </div>
+
+    <div class="form-modal ">
+      <form id="login-form" class="animate" action="">
+        <h2>Login Modal</h2>
+        <label for="email">Email: </label>
+        <br />
+        <input type="email" name="email" id="email" />
+        <br />
+        <label for="password">Password: </label>
+        <br />
+        <input type="password" name="email" id="password" /><br />
+        <input type="checkbox" id="rem" />
+        <label for="rem">Remember me</label>
+        <br />
+        <button id="signIn">Sign In</button>
+        <p>Do not have an Account? <span> sign up</span></p>
+        <button id="close">❌</button>
+      </form>
+
+      <form action="" id="signup-form" class="signup-form animate">
+        <h2>Sign up modal</h2>
+        <label for="username">username: </label>
+        <br />
+        <input type="text" name="" id="username" />
+        <br />
+        <label for="email">Email: </label>
+        <br />
+        <input type="email" name="" id="email" />
+        <br />
+        <label for="pass">Password:</label>
+        <br />
+        <input type="password" name="" id="pass" />
+        <br />
+        <label for="confirm-pw">confirm password:</label>
+        <br />
+        <input type="password" name="" id="confirm-pw" />
+        <br />
+        <button id="signup-btn">sign up</button>
+        <p>Already have an account? <span>Login here</span></p>
+        <button id="close">❌</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
