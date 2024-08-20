@@ -9,26 +9,28 @@
   <body>
     <div class="main h-screen w-full flex items-center justify-center bg-black">
       <div
-        class="dic-container border-none rounded-lg min-h-[200px] w-[80%] sm:w-[60%] p-5 flex flex-col gap-3 bg-blue-400">
+        class="dic-container border-none rounded-lg min-h-[300px] w-96 sm:w-[60%] p-8 flex flex-col items-center justify-center gap-3 bg-blue-400">
         <div class="title">
           <h1 class="text-center text-2xl font-bold text-white">
             Online Dictionary
           </h1>
         </div>
-        <div class="dictionary w-full">
+        <div class="dictionary w-full ">
           <input
           id="input"
             class="w-full border-1 border-slate-300 p-2 rounded-md outline-none"
             type="text"
             placeholder="search keyword" />
-          <h2 class="text-center mt-2 text-white">
+          <h2 id="headInfo" class="text-center text-lg mt-2 text-white">
             Type a word and press ENTER!
           </h2>
         </div>
-        <div class="info-container w-full">
-            <p class="text-sm"> <span class=" text-white">Meaning: </span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam atque ea, laboriosam dolores nisi ullam sed tempora cupiditate itaque deserunt!</p>
+        <div id="meaning-container" class="info-container w-full">
+
         </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
