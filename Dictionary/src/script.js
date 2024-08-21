@@ -12,7 +12,8 @@ async function fetchMeaning(word) {
         if (result[0] && result[0].word) {
             info.innerText = `Meaning for "${result[0].word}":`;
             meaning.innerHTML = `
-               <p class=" text-lg text-center "><span class="text-white ">"${result[0].word}"</span>: ${result[0].meanings[0].definitions[0].definition}</p>
+               <p class=" text-lg text-center "><span class="text-white ">"${result[0].word}"</span>:
+                ${result[0].meanings[0].definitions[0].definition}</p>
             `;
         } else {
             info.innerText = `Meaning for "${word}" is not available.`;
