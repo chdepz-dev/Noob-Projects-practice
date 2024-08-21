@@ -9,17 +9,22 @@
   <body>
     <div class="main">
       <div class="container">
+        <h2 style="text-align: center">Random Password Generator</h2>
         <label for="range" id="range-value">Length:</label>
-        <input type="range" id="range" name="range" min="6" max="16" value="6" />
-      
+        <input
+          type="range"
+          id="range"
+          name="range"
+          min="6"
+          max="16"
+          value="6" />
 
         <label for="password">password:</label>
-        <input type="text" id="password" />
-        
-        <div>
+        <input type="text" id="password" disabled />
 
-            <button id="btn">Generate</button>
-             <button id="copy">copy</button>
+        <div>
+          <button id="btn">Generate</button>
+          <button id="copy">copy</button>
         </div>
       </div>
     </div>

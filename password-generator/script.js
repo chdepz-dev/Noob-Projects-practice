@@ -15,22 +15,23 @@ btn.addEventListener("click", () => {
 })
 copyToclipboard.addEventListener("click", () => {
     copyPassword();
-    alert("password copied to clipboard")
+    password.value = "copied"
+    // alert("password copied to clipboard")
 })
 function generatePassword(length) {
-    let char = `0123456789abcdefghijklmnopqrstuvwxtz!@#$%^&*()_+?:{}[]ABCDEFGHIJKLMNOPQRSTUVWXYZ`
+    let char = `0123456789abcdefghijklmnopqrstuvwxtz
+                !@#$%^&*()_+?:{}[]ABCDEFGHIJKLMNOPQRSTUVWXYZ`
     let GeneratedPassword = "";
     for (let i = 0; i <= length; i++) {
-
         let randomNum = Math.floor(Math.random() * char.length)
-        let pw = char.charAt(randomNum)
-        GeneratedPassword += pw
+        let randomChar = char.charAt(randomNum)
+        GeneratedPassword += randomChar
     }
     password.value = GeneratedPassword
 }
 
-function copyPassword(){
-   password.select();
-   password.setSelectionRange(0, 20);
-   navigator.clipboard.writeText(password.value)
+function copyPassword() {
+    password.select();
+    password.setSelectionRange(0, 20);
+    navigator.clipboard.writeText(password.value)
 }
