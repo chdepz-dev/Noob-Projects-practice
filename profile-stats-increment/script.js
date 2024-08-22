@@ -1,4 +1,4 @@
- let counters = document.querySelectorAll(".counter")
+let counters = document.querySelectorAll(".counter")
 
 counters.forEach((counter) => {
     counter.textContent = 0;

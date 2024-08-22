@@ -4,45 +4,44 @@ const next = document.querySelector(".right");
 
 let currentSlide = 0;
 
-function showSlide(direction) {
+function showSlides(currentSlide, direction) {
     slides.forEach((slide, index) => {
-        slide.classList.remove("active", "enter-from-right", "enter-from-left");
+        slide.classList.remove("active", "enter-from-right", "enter-from-left")
         if (currentSlide === index) {
-            slide.classList.add("active", direction === 'next' ? "enter-from-right" : "enter-from-left");
+            slide.classList.add("active", direction === "next" ? "enter-from-right" : "enter-from-left")
         }
-    });
+    })
 }
 
-function nextSlide() {
+
+function nextSlide(){
     currentSlide++;
     if (currentSlide > slides.length - 1) {
         currentSlide = 0;
     }
-    showSlide('next');
+    showSlides(currentSlide, "next");
 }
-
-function prevSlide() {
+function prevSlide(){
     currentSlide--;
     if (currentSlide < 0) {
         currentSlide = slides.length - 1;
     }
-    showSlide('prev');
+    showSlides(currentSlide, "prev")
 }
 
 next.addEventListener("click", () => {
-    nextSlide();
-    clearInterval(autoslideInterval);
-    startAutoSlide();
-});
-
+    nextSlide()
+    clearInterval(autoSLideInterval)
+    autoSlide()
+})
 prev.addEventListener("click", () => {
-    prevSlide();
-    clearInterval(autoslideInterval);
-    startAutoSlide();
-});
+    prevSlide()
+    clearInterval(autoSLideInterval)
+    autoSlide()
+    
+})
 
-function startAutoSlide() {
-    autoslideInterval = setInterval(nextSlide, 4000);
+function autoSlide(){
+     autoSLideInterval = setInterval(nextSlide, 3000)
 }
-
-startAutoSlide();
+autoSlide()

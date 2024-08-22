@@ -10,6 +10,7 @@ range.addEventListener("input", (e) => {
     length = e.target.value
 })
 
+
 btn.addEventListener("click", () => {
     generatePassword(length)
 })

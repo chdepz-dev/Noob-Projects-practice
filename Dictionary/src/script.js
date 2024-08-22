@@ -28,6 +28,6 @@ async function fetchMeaning(word) {
 
 inputEl.addEventListener("keyup", (e) => {
     if (e.target.value && e.key === "Enter") {
-        fetchMeaning(e.target.value);
+        fetchMeaning(e.target.value)
     }
 });
