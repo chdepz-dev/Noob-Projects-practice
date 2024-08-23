@@ -16,7 +16,7 @@ body {
   width: 100%;
 }
 .hero {
-  height: 80%;
+  height: 90%;
   width: 100%;
   position: relative;
   display: flex;
@@ -107,4 +107,28 @@ body {
   font-size: 40px;
   filter: brightness(80%);
   cursor: pointer;
+}
+
+
+.dots-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+     height: 20px;
+     width: 100%;
+
+     bottom: 10px;
+}
+
+.dots{
+    height: 10px;
+    width: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+  
+}
+.dots.active{
+    background-color: rgb(218, 218, 218);
 }
