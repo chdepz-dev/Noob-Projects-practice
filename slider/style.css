@@ -1,22 +1,27 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-html,
-body {
+
+html, body {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
-body {
-  overflow: hidden;
 
+body {
+  /* overflow-y: auto; */
+  font-family: Arial, sans-serif;
 }
+
 .main {
   height: 100%;
   width: 100%;
 }
+
 .hero {
-  height: 90%;
+  height: 100%;
   width: 100%;
   position: relative;
   display: flex;
@@ -24,11 +29,13 @@ body {
   align-items: center;
   background-color: #000;
 }
+
 .slide {
   height: 100%;
   width: 100%;
   display: none;
 }
+
 .slide.active {
   display: block;
 }
@@ -36,6 +43,7 @@ body {
 .slide.enter-from-right {
   animation: enterFromRight 0.5s forwards;
 }
+
 @keyframes enterFromRight {
   0% {
     transform: translateX(100%);
@@ -44,9 +52,11 @@ body {
     transform: translateX(0%);
   }
 }
+
 .slide.enter-from-left {
-  animation: enterFromLeft 0.5s ease-in-out;
+  animation: enterFromLeft 0.5s ease-in-out forwards;
 }
+
 @keyframes enterFromLeft {
   0% {
     transform: translateX(-100%);
@@ -55,43 +65,28 @@ body {
     transform: translateX(0%);
   }
 }
-/* @keyframes slideleft {
-    0% {
-        transform: translateX(100%) ;
-      }
-      100% {
-        transform: translateX(0%) ;
-      }
-   
+
+.slide1, .slide2, .slide3, .slide4 {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
 }
-@keyframes slideright {
-    0% {
-        transform: translateX(-100%) ;
-      }
-      100% {
-        transform: translateX(0%) ;
-      }
-   
-} */
+
 .slide1 {
   background-image: url("./assests/1.jpg");
-  background-size: cover;
-  filter: brightness(50%);
 }
+
 .slide2 {
   background-image: url("./assests/2.jpg");
-  background-size: cover;
-  filter: brightness(50%);
 }
+
 .slide3 {
   background-image: url("./assests/3.jpg");
-  background-size: cover;
-  filter: brightness(50%);
 }
+
 .slide4 {
   background-image: url("./assests/4.jpg");
-  background-size: cover;
-  filter: brightness(50%);
 }
 
 .controller {
@@ -100,6 +95,7 @@ body {
   display: flex;
   height: 40px;
   justify-content: space-between;
+  align-items: center; 
 }
 
 .fa-solid {
@@ -109,26 +105,32 @@ body {
   cursor: pointer;
 }
 
-
-.dots-container{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-     height: 20px;
-     width: 100%;
-
-     bottom: 10px;
+.dots-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 20px;
+  width: 100%;
+  bottom: 10px;
 }
 
-.dots{
-    height: 10px;
-    width: 10px;
-    border: 1px solid white;
-    border-radius: 50%;
-  
+.dots {
+  height: 10px;
+  width: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: transparent;
 }
-.dots.active{
-    background-color: rgb(218, 218, 218);
+
+.dots.active {
+  background-color: white;  
+}
+
+
+@media (max-width: 700px) {
+  .hero{
+   display: none;
+  }
 }
